@@ -1,0 +1,71 @@
+
+---------------------------------------------------------------------------------------------------
+1- verificar a versão do python instalado (e atualizar; se não tiver, continuar)
+1.1- sair do ambiente virtual se tiver (conda deactivate)
+
+2- Criar um ambiente virtual (python3 -m venv ./env)
+2.1- se não tiver python3, seguir as instruções para instalar
+
+3- ativar o ambiente virtual(source ./env/bin/activate)
+
+4- instalar o django (pip install django)
+
+5- verificar a versão do django instalada
+
+6- guardar as dependencias (pip freeze > requirements.txt)
+
+
+--------------------------------------------------------------------------------------------------------------
+criar um projeto django: django-admin startproject projeto1
+
+no settings.py:
+
+  importar biblioteca os (import os)
+  indicar a pasta templates nos diretórios ('DIRS': ['templates'],), linha 58
+  adicionar um "STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')", abaixo de STATIC_URL (linha 119)
+-----------------------------------------------------------------------------------------------------------------
+
+voltando ao terminal:
+7- ls p ver qual pasta está
+
+8- entrar na pasta mais externa do projeto (no caso, cd projeto1/)
+
+9- rodar o projeto (python3 manage.py runserver)
+9.1- para ir lá, ctrl + clique no endereço que o terminal mostra
+
+---------------------------------------------------------------------------------------------------------------------
+
+Criação de um app dentro do projeto django (python3 manage.py startapp app1)
+
+configurar as urls (dentro do app e dentro do sv)
+
+criar pasta de templates
+
+criar migrações do ModelUser (python3 manage.py makemigrations)
+
+aplicar as migrações (python3 manage.py migrate)
+
+python shell (python3 manage.py shell) verificação de criação de tabelas
+
+criar superusuário (python3 manage.py createsuperuser)
+
+registrar models no admin.py(app1)
+
+se tiver erro na inserção de dados:
+  mudar o campo do model
+  makemigrations (python3 manage.py makemigrations) e  
+  aplicar as migrações (python3 manage.py migrate)
+
+criar templates
+
+criar formulário
+
+testar formulário (GET)
+
+jinja (engine de template) -> código no template
+
+bootstrap (css pré-pronto)
+
+criação de páginas dinâmicas com método POST
+
+criação de páginas dinâmicas com query params
